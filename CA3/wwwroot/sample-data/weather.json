@@ -1,0 +1,33 @@
+﻿{
+  "all": [
+    {
+      "date": "2018-05-06",
+      "temperatureC": 1,
+      "summary": { "w": "Freezing" }
+    },
+    {
+      "date": "2018-05-07",
+      "temperatureC": 14,
+      "summary": {
+        "w": "Bracing"
+      }
+    },
+    {
+      "date": "2018-05-08",
+      "temperatureC": -13,
+      "summary": {
+        "w": "Freezing"
+      }
+    },
+    {
+      "date": "2018-05-09",
+      "temperatureC": -16,
+      "summary": { "w": "Balmy" }
+    },
+    {
+      "date": "2018-05-10",
+      "temperatureC": -2,
+      "summary": { "w": "Chilly" }
+    }
+  ]
+}

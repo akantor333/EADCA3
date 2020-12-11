@@ -1,0 +1,70 @@
+﻿@page "/"
+@using System.Net.Http
+@inject HttpClient Http
+
+<h1>Cryptocurrency</h1>
+
+@if (coins == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Symbol</th>
+                <th>Rank</th>
+                <th>New</th>
+                <th>Active</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var c in coins){
+            <tr>
+                <td>@c.rank</td>
+                <td>@c.name</td>
+                <td>@c.id</td>
+                <td>@c.symbol</td>
+                <td>@c.is_new</td>
+                <td>@c.is_active</td>
+                <td>@c.type</td>
+            </tr>
+        }
+</tbody>
+</table>
+}
+
+<div></div>
+
+@code {
+    string displayData;
+
+    private List<Coin> coins;
+
+    protected override async Task OnInitializedAsync()
+    {
+        coins = await Http.GetFromJsonAsync<List<Coin>>("https://api.coinpaprika.com/v1/coins");
+    }
+
+    public class Coin
+    {
+        public string id { get; set; }
+
+        public string name { get; set; }
+
+        public string symbol { get; set; }
+
+        public int rank { get; set; }
+
+        public bool is_new { get; set; }
+
+        public bool is_active { get; set; }
+
+        public string type { get; set; }
+    }
+
+}
