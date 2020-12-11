@@ -2,46 +2,136 @@
 @using System.Net.Http
 @inject HttpClient Http
 
-<h1>Cryptocurrency</h1>
+<h1>Cryptocurrency List</h1>
 
 @if (coins == null)
 {
-    <p><em>Loading...</em></p>
+    <p><em>Long list loading.... Will take a couple of seconds....</em></p>
 }
 else
 {
-    <table class="table">
-        <thead>
+//---------Filtering Options Begin---------
+
+    <div class="form-group">
+        <div class="row">
+            <div class="col-sm-6">
+                <!--Search form-->
+                <input class="form-control" type="text" placeholder="Search..."
+                       @bind="Search"
+                       @bind:event="oninput" />
+            </div>
+            <div class="col-sm-2">
+                <!--Filter by type form-->
+                <select class="form-control" id="type" @bind="TypeFilter">
+                    <option selected value="all" style="color:lightgray">Type Filter</option>
+                    <option value="coin">Coin</option>
+                    <option value="token">Token</option>
+                </select>
+            </div>
+            <div class="col-sm-2">
+                <!--Filter by active Form-->
+                <select class="form-control" id="type" @bind="ActiveFilter">
+                    <option value="all" style="color:lightgray">Active Filter</option>
+                    <option selected value="True">Active</option>
+                    <option value="False">Inactive</option>
+                </select>
+            </div>
+            <div class="col-sm-2">
+                <!--Filter by new and old Form-->
+                <select class="form-control" id="type" @bind="NewFilter">
+                    <option selected value="all" style="color:lightgray">New Filter</option>
+                    <option value="True">New</option>
+                    <option value="False">Old</option>
+                </select>
+            </div>
+        </div>
+    </div>
+//---------Filtering Options End---------
+
+//---------Table Begin---------
+    <table class="table table-striped">
+        <thead class="thead-light">
             <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Symbol</th>
-                <th>Rank</th>
-                <th>New</th>
-                <th>Active</th>
-                <th>Type</th>
+                <th scope="col">Rank</th>
+                <th scope="col">Name</th>
+                <th scope="col">ID</th>
+                <th scope="col">Symbol</th>
+                <th scope="col">New</th>
+                <th scope="col">Active</th>
+                <th scope="col">Type</th>
             </tr>
         </thead>
+        <!--Itterate over every element of the List Coins-->
         <tbody>
-            @foreach (var c in coins){
-            <tr>
-                <td>@c.rank</td>
-                <td>@c.name</td>
-                <td>@c.id</td>
-                <td>@c.symbol</td>
-                <td>@c.is_new</td>
-                <td>@c.is_active</td>
-                <td>@c.type</td>
-            </tr>
-        }
-</tbody>
-</table>
+            @foreach (var c in coins)
+            {
+                <!--Filter checks-->
+                if (!isVisible(c))
+                    continue;
+                <tr>
+                    <td>@c.rank</td>
+                    <td>@c.name</td>
+                    <td>@c.id</td>
+                    <td>@c.symbol</td>
+                    <td>@c.is_new</td>
+                    <td>@c.is_active</td>
+                    <td>@c.type</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+//---------Table End---------
 }
 
 <div></div>
 
 @code {
-    string displayData;
+
+//---------Filter Code Begin---------
+
+    //Filter Variables
+    private string Search { get; set; }
+
+    private string TypeFilter { get; set; } = "all";
+
+    private string ActiveFilter { get; set; } = "True";
+
+    private string NewFilter { get; set; } = "all";
+
+
+    //Filter check function
+    private bool isVisible(Coin coin)
+    {
+        //Filter by New and Old
+        if (NewFilter == "all" || coin.is_new == Convert.ToBoolean(NewFilter))
+        {
+            //Filter by Active and Inactive
+            if (ActiveFilter == "all" || coin.is_active == Convert.ToBoolean(ActiveFilter))
+            {
+                //Filter by Type
+                if (coin.type == TypeFilter || TypeFilter == "all")
+                {
+                    //Filter by Search parameters in [name,id,symbol]
+                    if (string.IsNullOrEmpty(Search))
+                        return true;
+                    if (coin.name.Contains(Search, StringComparison.OrdinalIgnoreCase) || coin.id.Contains(Search, StringComparison.OrdinalIgnoreCase) || coin.symbol.Contains(Search, StringComparison.OrdinalIgnoreCase))
+                        return true;
+                    else
+                        return false;
+                }
+                else
+                    return false;
+            }
+            else
+                return false;
+        }
+        else
+            return false;
+    }
+//---------Filter Code End---------
+
+
+//---------Api Code Begin---------
 
     private List<Coin> coins;
 
@@ -50,7 +140,7 @@ else
         coins = await Http.GetFromJsonAsync<List<Coin>>("https://api.coinpaprika.com/v1/coins");
     }
 
-    public class Coin
+    private class Coin
     {
         public string id { get; set; }
 
@@ -66,5 +156,5 @@ else
 
         public string type { get; set; }
     }
-
+//---------Api Code End---------
 }

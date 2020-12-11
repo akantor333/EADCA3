@@ -354,6 +354,6 @@ C:\Users\deivi\source\repos\CA3\CA3\obj\Debug\netstandard2.1\RazorDeclaration\Pa
 C:\Users\deivi\source\repos\CA3\CA3\obj\Debug\netstandard2.1\RazorDeclaration\Pages\FetchData.razor.g.cs
 C:\Users\deivi\source\repos\CA3\CA3\obj\Debug\netstandard2.1\Razor\Pages\Counter.razor.g.cs
 C:\Users\deivi\source\repos\CA3\CA3\obj\Debug\netstandard2.1\Razor\Pages\FetchData.razor.g.cs
-C:\Users\deivi\source\repos\CA3\CA3\obj\Debug\netstandard2.1\integrity\KxZheet1IWHlNb2K13dRtwF4JTgsQnYpd8lbKcg5OhQ=.hash
-C:\Users\deivi\source\repos\CA3\CA3\obj\Debug\netstandard2.1\integrity\EO_wjpjnKlYKT_9uiyHUqP4iI98NUSQxc_2N07HTYWY=.hash
-C:\Users\deivi\source\repos\CA3\CA3\obj\Debug\netstandard2.1\integrity\Xj0RhOqKeq6b4OWr8KtbpTCX-If5Q47aI8IkVkSF7WQ=.hash
+C:\Users\deivi\source\repos\CA3\CA3\obj\Debug\netstandard2.1\integrity\gzhnoDXrlFmPuy77hNxffyiWctA3dV35K38VwtdavLw=.hash
+C:\Users\deivi\source\repos\CA3\CA3\obj\Debug\netstandard2.1\integrity\gcp4mMyWByZp5Q8kaycDZPLljDVfyEBJlE6wv92oEkE=.hash
+C:\Users\deivi\source\repos\CA3\CA3\obj\Debug\netstandard2.1\integrity\4SBAA5H99RjE9-81XXEa3L9poSmVBWJrb_EZBGhu9Po=.hash
