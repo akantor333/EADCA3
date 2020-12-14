@@ -78,7 +78,7 @@ using System.Net.Http;
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
-            __builder.AddMarkupContent(0, "<h1>Cryptocurrency List</h1>\r\n\r\n");
+            __builder.AddMarkupContent(0, "<h1>Cryptocurrency List</h1>");
 #nullable restore
 #line 7 "C:\Users\deivi\source\repos\CA3\CA3\Pages\Index.razor"
  if (coins == null)
@@ -87,8 +87,7 @@ using System.Net.Http;
 #line default
 #line hidden
 #nullable disable
-            __builder.AddContent(1, "    ");
-            __builder.AddMarkupContent(2, "<p><em>Long list loading.... Will take a couple of seconds....</em></p>\r\n");
+            __builder.AddMarkupContent(1, "<p><em>Long list loading.... Will take a couple of seconds....</em></p>");
 #nullable restore
 #line 10 "C:\Users\deivi\source\repos\CA3\CA3\Pages\Index.razor"
 }
@@ -100,21 +99,17 @@ else
 #line default
 #line hidden
 #nullable disable
-            __builder.AddContent(3, "    ");
+            __builder.OpenElement(2, "div");
+            __builder.AddAttribute(3, "class", "form-group");
             __builder.OpenElement(4, "div");
-            __builder.AddAttribute(5, "class", "form-group");
-            __builder.AddMarkupContent(6, "\r\n        ");
-            __builder.OpenElement(7, "div");
-            __builder.AddAttribute(8, "class", "row");
-            __builder.AddMarkupContent(9, "\r\n            ");
-            __builder.OpenElement(10, "div");
-            __builder.AddAttribute(11, "class", "col-sm-6");
-            __builder.AddMarkupContent(12, "\r\n                \r\n                ");
-            __builder.OpenElement(13, "input");
-            __builder.AddAttribute(14, "class", "form-control");
-            __builder.AddAttribute(15, "type", "text");
-            __builder.AddAttribute(16, "placeholder", "Search...");
-            __builder.AddAttribute(17, "value", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
+            __builder.AddAttribute(5, "class", "row");
+            __builder.OpenElement(6, "div");
+            __builder.AddAttribute(7, "class", "col-sm-6");
+            __builder.OpenElement(8, "input");
+            __builder.AddAttribute(9, "class", "form-control");
+            __builder.AddAttribute(10, "type", "text");
+            __builder.AddAttribute(11, "placeholder", "Search...");
+            __builder.AddAttribute(12, "value", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
 #nullable restore
 #line 20 "C:\Users\deivi\source\repos\CA3\CA3\Pages\Index.razor"
                               Search
@@ -123,19 +118,17 @@ else
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(18, "oninput", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => Search = __value, Search));
+            __builder.AddAttribute(13, "oninput", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => Search = __value, Search));
             __builder.SetUpdatesAttributeName("value");
             __builder.CloseElement();
-            __builder.AddMarkupContent(19, "\r\n            ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(20, "\r\n            ");
-            __builder.OpenElement(21, "div");
-            __builder.AddAttribute(22, "class", "col-sm-2");
-            __builder.AddMarkupContent(23, "\r\n                \r\n                ");
-            __builder.OpenElement(24, "select");
-            __builder.AddAttribute(25, "class", "form-control");
-            __builder.AddAttribute(26, "id", "type");
-            __builder.AddAttribute(27, "value", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
+            __builder.AddMarkupContent(14, "\r\n            ");
+            __builder.OpenElement(15, "div");
+            __builder.AddAttribute(16, "class", "col-sm-2");
+            __builder.OpenElement(17, "select");
+            __builder.AddAttribute(18, "class", "form-control");
+            __builder.AddAttribute(19, "id", "type");
+            __builder.AddAttribute(20, "value", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
 #nullable restore
 #line 25 "C:\Users\deivi\source\repos\CA3\CA3\Pages\Index.razor"
                                                               TypeFilter
@@ -144,37 +137,33 @@ else
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(28, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => TypeFilter = __value, TypeFilter));
+            __builder.AddAttribute(21, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => TypeFilter = __value, TypeFilter));
             __builder.SetUpdatesAttributeName("value");
-            __builder.AddMarkupContent(29, "\r\n                    ");
-            __builder.OpenElement(30, "option");
-            __builder.AddAttribute(31, "selected", true);
-            __builder.AddAttribute(32, "value", "all");
-            __builder.AddAttribute(33, "style", "color:lightgray");
-            __builder.AddContent(34, "Type Filter");
+            __builder.OpenElement(22, "option");
+            __builder.AddAttribute(23, "selected", true);
+            __builder.AddAttribute(24, "value", "all");
+            __builder.AddAttribute(25, "style", "color:lightgray");
+            __builder.AddContent(26, "Type Filter");
             __builder.CloseElement();
-            __builder.AddMarkupContent(35, "\r\n                    ");
-            __builder.OpenElement(36, "option");
-            __builder.AddAttribute(37, "value", "coin");
-            __builder.AddContent(38, "Coin");
+            __builder.AddMarkupContent(27, "\r\n                    ");
+            __builder.OpenElement(28, "option");
+            __builder.AddAttribute(29, "value", "coin");
+            __builder.AddContent(30, "Coin");
             __builder.CloseElement();
-            __builder.AddMarkupContent(39, "\r\n                    ");
-            __builder.OpenElement(40, "option");
-            __builder.AddAttribute(41, "value", "token");
-            __builder.AddContent(42, "Token");
+            __builder.AddMarkupContent(31, "\r\n                    ");
+            __builder.OpenElement(32, "option");
+            __builder.AddAttribute(33, "value", "token");
+            __builder.AddContent(34, "Token");
             __builder.CloseElement();
-            __builder.AddMarkupContent(43, "\r\n                ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(44, "\r\n            ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(45, "\r\n            ");
-            __builder.OpenElement(46, "div");
-            __builder.AddAttribute(47, "class", "col-sm-2");
-            __builder.AddMarkupContent(48, "\r\n                \r\n                ");
-            __builder.OpenElement(49, "select");
-            __builder.AddAttribute(50, "class", "form-control");
-            __builder.AddAttribute(51, "id", "type");
-            __builder.AddAttribute(52, "value", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
+            __builder.AddMarkupContent(35, "\r\n            ");
+            __builder.OpenElement(36, "div");
+            __builder.AddAttribute(37, "class", "col-sm-2");
+            __builder.OpenElement(38, "select");
+            __builder.AddAttribute(39, "class", "form-control");
+            __builder.AddAttribute(40, "id", "type");
+            __builder.AddAttribute(41, "value", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
 #nullable restore
 #line 33 "C:\Users\deivi\source\repos\CA3\CA3\Pages\Index.razor"
                                                               ActiveFilter
@@ -183,37 +172,33 @@ else
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(53, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => ActiveFilter = __value, ActiveFilter));
+            __builder.AddAttribute(42, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => ActiveFilter = __value, ActiveFilter));
             __builder.SetUpdatesAttributeName("value");
-            __builder.AddMarkupContent(54, "\r\n                    ");
-            __builder.OpenElement(55, "option");
-            __builder.AddAttribute(56, "value", "all");
-            __builder.AddAttribute(57, "style", "color:lightgray");
-            __builder.AddContent(58, "Active Filter");
+            __builder.OpenElement(43, "option");
+            __builder.AddAttribute(44, "value", "all");
+            __builder.AddAttribute(45, "style", "color:lightgray");
+            __builder.AddContent(46, "Active Filter");
             __builder.CloseElement();
-            __builder.AddMarkupContent(59, "\r\n                    ");
-            __builder.OpenElement(60, "option");
-            __builder.AddAttribute(61, "selected", true);
-            __builder.AddAttribute(62, "value", "True");
-            __builder.AddContent(63, "Active");
+            __builder.AddMarkupContent(47, "\r\n                    ");
+            __builder.OpenElement(48, "option");
+            __builder.AddAttribute(49, "selected", true);
+            __builder.AddAttribute(50, "value", "True");
+            __builder.AddContent(51, "Active");
             __builder.CloseElement();
-            __builder.AddMarkupContent(64, "\r\n                    ");
-            __builder.OpenElement(65, "option");
-            __builder.AddAttribute(66, "value", "False");
-            __builder.AddContent(67, "Inactive");
+            __builder.AddMarkupContent(52, "\r\n                    ");
+            __builder.OpenElement(53, "option");
+            __builder.AddAttribute(54, "value", "False");
+            __builder.AddContent(55, "Inactive");
             __builder.CloseElement();
-            __builder.AddMarkupContent(68, "\r\n                ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(69, "\r\n            ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(70, "\r\n            ");
-            __builder.OpenElement(71, "div");
-            __builder.AddAttribute(72, "class", "col-sm-2");
-            __builder.AddMarkupContent(73, "\r\n                \r\n                ");
-            __builder.OpenElement(74, "select");
-            __builder.AddAttribute(75, "class", "form-control");
-            __builder.AddAttribute(76, "id", "type");
-            __builder.AddAttribute(77, "value", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
+            __builder.AddMarkupContent(56, "\r\n            ");
+            __builder.OpenElement(57, "div");
+            __builder.AddAttribute(58, "class", "col-sm-2");
+            __builder.OpenElement(59, "select");
+            __builder.AddAttribute(60, "class", "form-control");
+            __builder.AddAttribute(61, "id", "type");
+            __builder.AddAttribute(62, "value", Microsoft.AspNetCore.Components.BindConverter.FormatValue(
 #nullable restore
 #line 41 "C:\Users\deivi\source\repos\CA3\CA3\Pages\Index.razor"
                                                               NewFilter
@@ -222,34 +207,28 @@ else
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(78, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => NewFilter = __value, NewFilter));
+            __builder.AddAttribute(63, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.CreateBinder(this, __value => NewFilter = __value, NewFilter));
             __builder.SetUpdatesAttributeName("value");
-            __builder.AddMarkupContent(79, "\r\n                    ");
-            __builder.OpenElement(80, "option");
-            __builder.AddAttribute(81, "selected", true);
-            __builder.AddAttribute(82, "value", "all");
-            __builder.AddAttribute(83, "style", "color:lightgray");
-            __builder.AddContent(84, "New Filter");
+            __builder.OpenElement(64, "option");
+            __builder.AddAttribute(65, "selected", true);
+            __builder.AddAttribute(66, "value", "all");
+            __builder.AddAttribute(67, "style", "color:lightgray");
+            __builder.AddContent(68, "New Filter");
             __builder.CloseElement();
-            __builder.AddMarkupContent(85, "\r\n                    ");
-            __builder.OpenElement(86, "option");
-            __builder.AddAttribute(87, "value", "True");
-            __builder.AddContent(88, "New");
+            __builder.AddMarkupContent(69, "\r\n                    ");
+            __builder.OpenElement(70, "option");
+            __builder.AddAttribute(71, "value", "True");
+            __builder.AddContent(72, "New");
             __builder.CloseElement();
-            __builder.AddMarkupContent(89, "\r\n                    ");
-            __builder.OpenElement(90, "option");
-            __builder.AddAttribute(91, "value", "False");
-            __builder.AddContent(92, "Old");
+            __builder.AddMarkupContent(73, "\r\n                    ");
+            __builder.OpenElement(74, "option");
+            __builder.AddAttribute(75, "value", "False");
+            __builder.AddContent(76, "Old");
             __builder.CloseElement();
-            __builder.AddMarkupContent(93, "\r\n                ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(94, "\r\n            ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(95, "\r\n        ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(96, "\r\n    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(97, "\r\n");
 #nullable restore
 #line 49 "C:\Users\deivi\source\repos\CA3\CA3\Pages\Index.razor"
 //---------Filtering Options End---------
@@ -259,25 +238,18 @@ else
 #line default
 #line hidden
 #nullable disable
-            __builder.AddContent(98, "    ");
-            __builder.OpenElement(99, "table");
-            __builder.AddAttribute(100, "class", "table table-striped");
-            __builder.AddMarkupContent(101, "\r\n        ");
-            __builder.AddMarkupContent(102, @"<thead class=""thead-light"">
-            <tr>
-                <th scope=""col"">Rank</th>
+            __builder.OpenElement(77, "table");
+            __builder.AddAttribute(78, "class", "table table-striped");
+            __builder.AddMarkupContent(79, @"<thead class=""thead-light""><tr><th scope=""col"">Rank</th>
                 <th scope=""col"">Name</th>
                 <th scope=""col"">ID</th>
                 <th scope=""col"">Symbol</th>
                 <th scope=""col"">New</th>
                 <th scope=""col"">Active</th>
-                <th scope=""col"">Type</th>
-            </tr>
-        </thead>
+                <th scope=""col"">Type</th></tr></thead>
         
         ");
-            __builder.OpenElement(103, "tbody");
-            __builder.AddMarkupContent(104, "\r\n");
+            __builder.OpenElement(80, "tbody");
 #nullable restore
 #line 66 "C:\Users\deivi\source\repos\CA3\CA3\Pages\Index.razor"
              foreach (var c in coins)
@@ -286,7 +258,6 @@ else
 #line default
 #line hidden
 #nullable disable
-            __builder.AddMarkupContent(105, "                \r\n");
 #nullable restore
 #line 69 "C:\Users\deivi\source\repos\CA3\CA3\Pages\Index.razor"
                 if (!isVisible(c))
@@ -295,11 +266,9 @@ else
 #line default
 #line hidden
 #nullable disable
-            __builder.AddContent(106, "                ");
-            __builder.OpenElement(107, "tr");
-            __builder.AddMarkupContent(108, "\r\n                    ");
-            __builder.OpenElement(109, "td");
-            __builder.AddContent(110, 
+            __builder.OpenElement(81, "tr");
+            __builder.OpenElement(82, "td");
+            __builder.AddContent(83, 
 #nullable restore
 #line 72 "C:\Users\deivi\source\repos\CA3\CA3\Pages\Index.razor"
                          c.rank
@@ -309,9 +278,9 @@ else
 #nullable disable
             );
             __builder.CloseElement();
-            __builder.AddMarkupContent(111, "\r\n                    ");
-            __builder.OpenElement(112, "td");
-            __builder.AddContent(113, 
+            __builder.AddMarkupContent(84, "\r\n                    ");
+            __builder.OpenElement(85, "td");
+            __builder.AddContent(86, 
 #nullable restore
 #line 73 "C:\Users\deivi\source\repos\CA3\CA3\Pages\Index.razor"
                          c.name
@@ -321,9 +290,9 @@ else
 #nullable disable
             );
             __builder.CloseElement();
-            __builder.AddMarkupContent(114, "\r\n                    ");
-            __builder.OpenElement(115, "td");
-            __builder.AddContent(116, 
+            __builder.AddMarkupContent(87, "\r\n                    ");
+            __builder.OpenElement(88, "td");
+            __builder.AddContent(89, 
 #nullable restore
 #line 74 "C:\Users\deivi\source\repos\CA3\CA3\Pages\Index.razor"
                          c.id
@@ -333,9 +302,9 @@ else
 #nullable disable
             );
             __builder.CloseElement();
-            __builder.AddMarkupContent(117, "\r\n                    ");
-            __builder.OpenElement(118, "td");
-            __builder.AddContent(119, 
+            __builder.AddMarkupContent(90, "\r\n                    ");
+            __builder.OpenElement(91, "td");
+            __builder.AddContent(92, 
 #nullable restore
 #line 75 "C:\Users\deivi\source\repos\CA3\CA3\Pages\Index.razor"
                          c.symbol
@@ -345,9 +314,9 @@ else
 #nullable disable
             );
             __builder.CloseElement();
-            __builder.AddMarkupContent(120, "\r\n                    ");
-            __builder.OpenElement(121, "td");
-            __builder.AddContent(122, 
+            __builder.AddMarkupContent(93, "\r\n                    ");
+            __builder.OpenElement(94, "td");
+            __builder.AddContent(95, 
 #nullable restore
 #line 76 "C:\Users\deivi\source\repos\CA3\CA3\Pages\Index.razor"
                          c.is_new
@@ -357,9 +326,9 @@ else
 #nullable disable
             );
             __builder.CloseElement();
-            __builder.AddMarkupContent(123, "\r\n                    ");
-            __builder.OpenElement(124, "td");
-            __builder.AddContent(125, 
+            __builder.AddMarkupContent(96, "\r\n                    ");
+            __builder.OpenElement(97, "td");
+            __builder.AddContent(98, 
 #nullable restore
 #line 77 "C:\Users\deivi\source\repos\CA3\CA3\Pages\Index.razor"
                          c.is_active
@@ -369,9 +338,9 @@ else
 #nullable disable
             );
             __builder.CloseElement();
-            __builder.AddMarkupContent(126, "\r\n                    ");
-            __builder.OpenElement(127, "td");
-            __builder.AddContent(128, 
+            __builder.AddMarkupContent(99, "\r\n                    ");
+            __builder.OpenElement(100, "td");
+            __builder.AddContent(101, 
 #nullable restore
 #line 78 "C:\Users\deivi\source\repos\CA3\CA3\Pages\Index.razor"
                          c.type
@@ -381,9 +350,7 @@ else
 #nullable disable
             );
             __builder.CloseElement();
-            __builder.AddMarkupContent(129, "\r\n                ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(130, "\r\n");
 #nullable restore
 #line 80 "C:\Users\deivi\source\repos\CA3\CA3\Pages\Index.razor"
             }
@@ -391,11 +358,8 @@ else
 #line default
 #line hidden
 #nullable disable
-            __builder.AddContent(131, "        ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(132, "\r\n    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(133, "\r\n");
 #nullable restore
 #line 83 "C:\Users\deivi\source\repos\CA3\CA3\Pages\Index.razor"
 //---------Table End---------
@@ -404,7 +368,7 @@ else
 #line default
 #line hidden
 #nullable disable
-            __builder.AddMarkupContent(134, "\r\n<div></div>");
+            __builder.AddMarkupContent(102, "<div></div>");
         }
         #pragma warning restore 1998
 #nullable restore

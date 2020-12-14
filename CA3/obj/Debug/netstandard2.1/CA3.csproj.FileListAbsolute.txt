@@ -1,4 +1,3 @@
-C:\Users\deivi\source\repos\CA3\CA3\bin\Debug\netstandard2.1\Properties\launchSettings.json
 C:\Users\deivi\source\repos\CA3\CA3\bin\Debug\netstandard2.1\CA3.StaticWebAssets.xml
 C:\Users\deivi\source\repos\CA3\CA3\bin\Debug\netstandard2.1\CA3.dll
 C:\Users\deivi\source\repos\CA3\CA3\bin\Debug\netstandard2.1\CA3.pdb
@@ -354,6 +353,8 @@ C:\Users\deivi\source\repos\CA3\CA3\obj\Debug\netstandard2.1\RazorDeclaration\Pa
 C:\Users\deivi\source\repos\CA3\CA3\obj\Debug\netstandard2.1\RazorDeclaration\Pages\FetchData.razor.g.cs
 C:\Users\deivi\source\repos\CA3\CA3\obj\Debug\netstandard2.1\Razor\Pages\Counter.razor.g.cs
 C:\Users\deivi\source\repos\CA3\CA3\obj\Debug\netstandard2.1\Razor\Pages\FetchData.razor.g.cs
-C:\Users\deivi\source\repos\CA3\CA3\obj\Debug\netstandard2.1\integrity\gzhnoDXrlFmPuy77hNxffyiWctA3dV35K38VwtdavLw=.hash
-C:\Users\deivi\source\repos\CA3\CA3\obj\Debug\netstandard2.1\integrity\gcp4mMyWByZp5Q8kaycDZPLljDVfyEBJlE6wv92oEkE=.hash
-C:\Users\deivi\source\repos\CA3\CA3\obj\Debug\netstandard2.1\integrity\4SBAA5H99RjE9-81XXEa3L9poSmVBWJrb_EZBGhu9Po=.hash
+C:\Users\deivi\source\repos\CA3\CA3\obj\Debug\netstandard2.1\CA3.RazorComponent.output.cache
+C:\Users\deivi\source\repos\CA3\CA3\obj\Debug\netstandard2.1\integrity\GfaUTSSYZiIgp3aoFvPBN9FgBRuWU87S-aDYt9YSon8=.hash
+C:\Users\deivi\source\repos\CA3\CA3\obj\Debug\netstandard2.1\integrity\TMTmTN-lHbX1AUHp_h-uaSHg9MAddAaEcsb6MVaRDmM=.hash
+C:\Users\deivi\source\repos\CA3\CA3\obj\Debug\netstandard2.1\integrity\N_hblImquyBvpPJ1yRRu45jHTtkuHoRfkqwS8zTuKwc=.hash
+C:\Users\deivi\source\repos\CA3\CA3\obj\Debug\netstandard2.1\scopedcss\bundle\CA3.styles.css

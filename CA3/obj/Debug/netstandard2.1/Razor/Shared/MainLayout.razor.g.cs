@@ -79,19 +79,15 @@ using CA3.Shared;
         {
             __builder.OpenElement(0, "div");
             __builder.AddAttribute(1, "class", "sidebar");
-            __builder.AddMarkupContent(2, "\r\n    ");
-            __builder.OpenComponent<CA3.Shared.NavMenu>(3);
+            __builder.OpenComponent<CA3.Shared.NavMenu>(2);
             __builder.CloseComponent();
-            __builder.AddMarkupContent(4, "\r\n");
             __builder.CloseElement();
-            __builder.AddMarkupContent(5, "\r\n\r\n");
+            __builder.AddMarkupContent(3, "\r\n\r\n");
+            __builder.OpenElement(4, "div");
+            __builder.AddAttribute(5, "class", "main");
             __builder.OpenElement(6, "div");
-            __builder.AddAttribute(7, "class", "main");
-            __builder.AddMarkupContent(8, "\r\n    ");
-            __builder.OpenElement(9, "div");
-            __builder.AddAttribute(10, "class", "content px-4");
-            __builder.AddMarkupContent(11, "\r\n        ");
-            __builder.AddContent(12, 
+            __builder.AddAttribute(7, "class", "content px-4");
+            __builder.AddContent(8, 
 #nullable restore
 #line 9 "C:\Users\deivi\source\repos\CA3\CA3\Shared\MainLayout.razor"
          Body
@@ -100,9 +96,7 @@ using CA3.Shared;
 #line hidden
 #nullable disable
             );
-            __builder.AddMarkupContent(13, "\r\n    ");
             __builder.CloseElement();
-            __builder.AddMarkupContent(14, "\r\n");
             __builder.CloseElement();
         }
         #pragma warning restore 1998
