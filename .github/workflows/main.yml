@@ -14,6 +14,10 @@ jobs:
         dotnet-version: 3.1
     - name: Publish .NET Core Project
       run: dotnet publish CA3/CA3.csproj -c Release -o release --nologo
+
+    - name: Change base-tag in index.html from / to EADCA1
+      run: sed -i 's/<base href="\/" \/>/<base href="\/EADCA1\/" \/>/g' release/wwwroot/index.html
+      
     - name: Commit wwwroot to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@3.7.1
       with:
